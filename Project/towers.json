@@ -1,0 +1,54 @@
+<TableView
+:headers="[
+  {"lable":"Tower id","field":"tower_id","sortable":true,
+"type":"Number"},
+{"lable":"Operator","field":"operator","sortable":true,
+"type":"String"},
+{"lable":"Address","field":"address","sortable":true,
+"type":"String"},
+{"lable":"Height","field":"height","sortable":true,
+"type":"Number"},
+ {"lable":"Tower type","field":"tower_type","sortable":true,
+"type":"String"},
+{"lable":"Latitude","field":"latitude","sortable":true,
+"type":"Number"},
+{"lable":"Longitude","field":"longitude","sortable":true,
+"type":"Number"}, 
+{"lable":"Technology","field":"technology","sortable":true,
+"type":"String"}
+]",
+:rows="[
+  {"tower_id":17191 ,"operator":"AT&T", "address":"W550 EUSTACE ROAD   (94421)", "height": 76.2 , "tower_type":"GTOWER" , "latitude": 45.71055556 , "longitude": -87.34727778 , "technology": "5G" },
+  {"tower_id":41475, "operator":"AT&T", "address":"147TH 90 ROAD (102999)", "height": 106.4 ,  "tower_type": "GTOWER" , "latitude": 44.77055556 , "longitude": -73.61305556 , "technology": "3G" },
+  {"tower_id":16947, "operator":"AT&T", "address":"28859 460th Ave (110310)",  "height": 96 , "tower_type": "GTOWER" ,  "latitude": 44.006858333 , "longitude": -95.1615 , "technology": "5G"},
+  {"tower_id":7634, "operator":"AT&T", "address":"(Media One Rookery site)301 TOWER RD" , "height": 77.1 , "tower_type": "TOWER" , "latitude": 26.05613889 ,  "longitude": -81.70091667 ,  "technology": "2G"},
+  {"tower_id":30936 ,"operator":"AT&T", "address":"11000 Old Agnes Road  (55397)" , "height": 102.1 ,  "tower_type": "GTOWER" , "latitude": 32.97641667 , "longitude": -97.78802778 , "technology": "4G" }
+]", 
+:sort="{
+  field: 'tower_id',
+  order: 'asc'
+}",
+:pagination="{
+  itemsPerPage: 20,
+  align: 'center',
+  visualStyle: 'select'
+}",
+css-style="my-css-style"
+>
+<template v-slot:items="{ row }">
+      <td>{{ row.tower_id }}</td>  
+      <td>{{ row.operator }}</td>              
+      <td>{{ row.address}}</td>     
+      <td>{{ row.height }}</td>              
+      <td>{{ row.tower_type}}</td>  
+      <td>{{ row.latitude }}</td>              
+      <td>{{ row.longitude}}</td>   
+      <td>{{ row.technology}}</td>       
+    </template>
+    <template v-slot:no-data>
+      <span>No data</span>
+    </template>
+  </TableView>
+    
+   
+  
