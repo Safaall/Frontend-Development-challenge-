@@ -52,7 +52,7 @@
   order: 'asc'
 }",
 :pagination="{
-  itemsPerPage: 20,
+  itemsPerPage: 10,
   align: 'center',
   visualStyle: 'select'
 }",
